@@ -196,4 +196,37 @@ font-size:2rem;
 font-size:1rem;
 }
 
+}.stats{
+background:#0f172a;
+color:white;
+text-align:center;
 }
+
+.stats h2{
+color:#FFD700;
+margin-bottom:40px;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.stat-box{
+background:#1e293b;
+padding:30px;
+border-radius:15px;
+transition:.3s;
+}
+
+.stat-box:hover{
+transform:translateY(-10px);
+}
+
+.stat-box h3{
+font-size:40px;
+color:#FFD700;
+margin-bottom:10px;
+}
+
