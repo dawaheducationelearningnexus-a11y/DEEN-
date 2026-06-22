@@ -666,3 +666,25 @@ font-size:16px;
 }
 
 }
+
+body{
+opacity:0;
+transition:1s;
+}
+
+.show{
+opacity:1 !important;
+transform:translateY(0) !important;
+}
+
+.card,
+.course-card,
+.gallery-item,
+.welcome-content,
+.welcome-image,
+.vision,
+.contact-section{
+opacity:0;
+transform:translateY(50px);
+transition:all 1s ease;
+}
