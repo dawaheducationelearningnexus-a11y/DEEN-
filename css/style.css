@@ -1,1 +1,199 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Noto Sans Bengali',sans-serif;
+}
 
+body{
+background:#f8f9fa;
+color:#222;
+line-height:1.7;
+}
+
+.navbar{
+background:#0f172a;
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 8%;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 4px 15px rgba(0,0,0,.2);
+}
+
+.logo-area{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo-area img{
+width:60px;
+height:60px;
+border-radius:50%;
+object-fit:cover;
+}
+
+.logo-area h2{
+color:#FFD700;
+}
+
+.logo-area p{
+font-size:12px;
+color:#ddd;
+}
+
+nav{
+display:flex;
+gap:20px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+nav a:hover{
+color:#FFD700;
+}
+
+.hero{
+min-height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:50px 10%;
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url('https://images.unsplash.com/photo-1564769625905-50e93615e769?q=80&w=1600');
+background-size:cover;
+background-position:center;
+color:white;
+}
+
+.hero-content h1{
+font-size:3rem;
+margin-bottom:20px;
+}
+
+.hero-content p{
+max-width:800px;
+margin:auto;
+font-size:1.2rem;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:14px 30px;
+background:#FFD700;
+color:#000;
+text-decoration:none;
+font-weight:bold;
+border-radius:50px;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+section{
+padding:80px 10%;
+}
+
+section h2{
+text-align:center;
+margin-bottom:25px;
+color:#0f172a;
+}
+
+.about,
+.vision,
+.mission,
+.contact{
+background:white;
+margin:25px auto;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.mission ul{
+max-width:900px;
+margin:auto;
+}
+
+.mission li{
+margin-bottom:12px;
+}
+
+.departments{
+background:#f1f5f9;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:15px;
+text-align:center;
+font-weight:600;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.contact p{
+text-align:center;
+font-size:18px;
+}
+
+footer{
+background:#0f172a;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:50px;
+}
+
+footer h3{
+color:#FFD700;
+margin-bottom:10px;
+}
+
+@media(max-width:768px){
+
+.navbar{
+flex-direction:column;
+gap:15px;
+}
+
+nav{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero-content h1{
+font-size:2rem;
+}
+
+.hero-content p{
+font-size:1rem;
+}
+
+}
