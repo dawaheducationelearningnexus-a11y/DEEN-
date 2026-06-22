@@ -1,15 +1,3 @@
-// Welcome Message
-
-window.addEventListener("load", () => {
-
-setTimeout(() => {
-
-alert("আসসালামু আলাইকুম। DEEN - Dawah Education & E-learning Nexus এ আপনাকে স্বাগতম।");
-
-},1000);
-
-});
-
 
 // Smooth Animation
 
@@ -43,4 +31,4 @@ card.style.opacity="0";
 card.style.transform="translateY(50px)";
 card.style.transition="0.8s";
 
-});
+}
