@@ -1,243 +1,298 @@
-// =============================
-// DEEN PREMIUM SCRIPT
+// ======================================
+// DEEN PREMIUM SCRIPT v2.0
+// Dawah Education & E-learning Nexus
 // Knowledge Changes Lives
-// =============================
+// ======================================
 
 
-// Page Loaded Effect
-
+// Page Load Effect
 window.addEventListener("load", () => {
 
-document.body.style.opacity = "1";
+    document.body.style.opacity = "1";
 
-console.log("DEEN Website Loaded Successfully");
+    console.log("DEEN Website Loaded Successfully");
 
 });
 
 
-// Smooth Reveal Animation
+
+// ======================================
+// Reveal Animation
+// ======================================
 
 const observer = new IntersectionObserver((entries) => {
 
-entries.forEach((entry) => {
+    entries.forEach((entry) => {
 
-if(entry.isIntersecting){
+        if (entry.isIntersecting) {
 
-entry.target.classList.add("show");
+            entry.target.classList.add("show");
 
-}
+        }
 
-});
+    });
 
-},{
-threshold:0.15
+}, {
+
+    threshold: 0.15
+
 });
 
 document.querySelectorAll(
-".card,.course-card,.gallery-grid img,.welcome-content,.welcome-image,.vision,.contact-section"
-).forEach((el)=>{
+".card,.course-card,.gallery-item,.welcome-content,.welcome-image,.vision,.contact-section"
+).forEach((el) => {
 
-observer.observe(el);
+    observer.observe(el);
 
 });
 
 
+
+// ======================================
 // Navbar Shadow Effect
+// ======================================
 
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll", () => {
 
-const navbar = document.querySelector(".navbar");
+    const navbar = document.querySelector(".navbar");
 
-if(window.scrollY > 50){
+    if (!navbar) return;
 
-navbar.style.background="#031c16";
-navbar.style.boxShadow="0 10px 25px rgba(0,0,0,.35)";
+    if (window.scrollY > 50) {
 
-}else{
+        navbar.style.background = "#031c16";
+        navbar.style.boxShadow =
+        "0 10px 25px rgba(0,0,0,.35)";
 
-navbar.style.background="#052b22";
-navbar.style.boxShadow="0 5px 15px rgba(0,0,0,.2)";
+    } else {
 
-}
+        navbar.style.background = "#052b22";
+        navbar.style.boxShadow =
+        "0 5px 15px rgba(0,0,0,.2)";
+
+    }
 
 });
 
 
-// Button Hover Animation
+
+// ======================================
+// Premium Button Hover
+// ======================================
 
 document.querySelectorAll(
 ".btn-primary,.btn-secondary"
-).forEach(btn=>{
+).forEach(btn => {
 
-btn.addEventListener("mouseenter",()=>{
+    btn.addEventListener("mouseenter", () => {
 
-btn.style.transform="translateY(-5px) scale(1.03)";
+        btn.style.transform =
+        "translateY(-5px) scale(1.03)";
 
-});
+    });
 
-btn.addEventListener("mouseleave",()=>{
+    btn.addEventListener("mouseleave", () => {
 
-btn.style.transform="translateY(0px) scale(1)";
+        btn.style.transform =
+        "translateY(0px) scale(1)";
 
-});
-
-});
-
-
-// Course Card Tilt Effect
-
-document.querySelectorAll(".course-card").forEach(card=>{
-
-card.addEventListener("mousemove",(e)=>{
-
-const x = e.offsetX;
-const y = e.offsetY;
-
-const rotateY = (x - 150) / 20;
-const rotateX = (150 - y) / 20;
-
-card.style.transform =
-`perspective(1000px)
-rotateX(${rotateX}deg)
-rotateY(${rotateY}deg)
-scale(1.03)`;
-
-});
-
-card.addEventListener("mouseleave",()=>{
-
-card.style.transform =
-"perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)";
-
-});
+    });
 
 });
 
 
-// Auto Update Footer Year
+
+// ======================================
+// Course Card 3D Effect
+// ======================================
+
+document.querySelectorAll(".course-card").forEach(card => {
+
+    card.addEventListener("mousemove", (e) => {
+
+        const rect = card.getBoundingClientRect();
+
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const rotateY = (x - rect.width / 2) / 20;
+        const rotateX = (rect.height / 2 - y) / 20;
+
+        card.style.transform =
+        `perspective(1000px)
+        rotateX(${rotateX}deg)
+        rotateY(${rotateY}deg)
+        scale(1.03)`;
+
+    });
+
+    card.addEventListener("mouseleave", () => {
+
+        card.style.transform =
+        "perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)";
+
+    });
+
+});
+
+
+
+// ======================================
+// Footer Year Auto Update
+// ======================================
 
 const year = new Date().getFullYear();
 
 const copyright =
 document.querySelector(".copyright");
 
-if(copyright){
+if (copyright) {
 
-copyright.innerHTML =
-`© 2024 - ${year} Dawah Education & E-learning Nexus`;
+    copyright.innerHTML =
+    `© 2024 - ${year} Dawah Education & E-learning Nexus`;
 
 }
 
 
-// Welcome Message
 
-setTimeout(()=>{
+// ======================================
+// Welcome Console Message
+// ======================================
+
+setTimeout(() => {
 
 console.log(
 "Welcome to DEEN - Knowledge Changes Lives"
 );
 
-},2000);
+}, 1500);
 
 
-// Scroll To Top Button Create
+
+// ======================================
+// Scroll To Top Button
+// ======================================
 
 const topBtn = document.createElement("button");
 
 topBtn.innerHTML = "↑";
 
+topBtn.id = "scrollTopBtn";
+
 document.body.appendChild(topBtn);
 
-topBtn.style.position = "fixed";
-topBtn.style.bottom = "25px";
-topBtn.style.right = "25px";
-topBtn.style.width = "50px";
-topBtn.style.height = "50px";
-topBtn.style.border = "none";
-topBtn.style.borderRadius = "50%";
-topBtn.style.background = "#d4af37";
-topBtn.style.color = "#052b22";
-topBtn.style.fontSize = "22px";
-topBtn.style.fontWeight = "bold";
-topBtn.style.cursor = "pointer";
-topBtn.style.display = "none";
-topBtn.style.zIndex = "9999";
-topBtn.style.boxShadow =
-"0 8px 20px rgba(0,0,0,.3)";
+Object.assign(topBtn.style, {
 
+position: "fixed",
+bottom: "25px",
+right: "25px",
+width: "55px",
+height: "55px",
+border: "none",
+borderRadius: "50%",
+background: "#d4af37",
+color: "#052b22",
+fontSize: "24px",
+fontWeight: "bold",
+cursor: "pointer",
+display: "none",
+zIndex: "9999",
+boxShadow:
+"0 10px 25px rgba(0,0,0,.3)"
 
-window.addEventListener("scroll",()=>{
+});
 
-if(window.scrollY > 400){
+window.addEventListener("scroll", () => {
 
-topBtn.style.display = "block";
+    if (window.scrollY > 400) {
 
-}else{
+        topBtn.style.display = "block";
 
-topBtn.style.display = "none";
+    } else {
 
-}
+        topBtn.style.display = "none";
+
+    }
+
+});
+
+topBtn.addEventListener("click", () => {
+
+    window.scrollTo({
+
+        top: 0,
+        behavior: "smooth"
+
+    });
 
 });
 
 
-topBtn.addEventListener("click",()=>{
 
-window.scrollTo({
+// ======================================
+// Premium Image Hover Effect
+// ======================================
 
-top:0,
-behavior:"smooth"
+document.querySelectorAll("img").forEach(img => {
 
-});
+    img.addEventListener("mouseenter", () => {
 
-});
+        img.style.transition = "0.4s";
+        img.style.transform = "scale(1.03)";
 
+    });
 
-// Image Zoom Effect
+    img.addEventListener("mouseleave", () => {
 
-document.querySelectorAll("img").forEach(img=>{
+        img.style.transform = "scale(1)";
 
-img.addEventListener("mouseenter",()=>{
-
-img.style.transition="0.4s";
-img.style.transform="scale(1.03)";
-
-});
-
-img.addEventListener("mouseleave",()=>{
-
-img.style.transform="scale(1)";
+    });
 
 });
 
-  
 
+
+// ======================================
+// Smooth Anchor Scroll
+// ======================================
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener("click", function (e) {
+
+        const target =
+        document.querySelector(
+        this.getAttribute("href")
+        );
+
+        if (target) {
+
+            e.preventDefault();
+
+            target.scrollIntoView({
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+    });
+
+});
+
+
+
+// ======================================
 // DEEN Signature
+// ======================================
 
 console.log(`
-======================================
+
+=========================================
 DEEN
-Knowledge Changes Lives
 Dawah Education & E-learning Nexus
-======================================
-`);body{
-opacity:0;
-transition:1s;
-}
+Knowledge Changes Lives
+=========================================
 
-.show{
-opacity:1 !important;
-transform:translateY(0) !important;
-}
-
-.card,
-.course-card,
-.gallery-grid img,
-.welcome-content,
-.welcome-image,
-.vision,
-.contact-section{
-opacity:0;
-transform:translateY(50px);
-transition:1s;
-}
+`);
