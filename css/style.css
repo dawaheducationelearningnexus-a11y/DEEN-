@@ -688,3 +688,55 @@ opacity:0;
 transform:translateY(50px);
 transition:all 1s ease;
 }
+
+/* ADMISSION FORM */
+
+.admission-form{
+
+max-width:800px;
+
+margin:auto;
+
+padding:40px;
+
+background:white;
+
+border-radius:20px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+
+}
+
+.admission-form form{
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.admission-form input,
+.admission-form select,
+.admission-form textarea{
+
+padding:15px;
+
+border:1px solid #ddd;
+
+border-radius:10px;
+
+font-size:16px;
+
+}
+
+.admission-form input:focus,
+.admission-form select:focus,
+.admission-form textarea:focus{
+
+outline:none;
+
+border-color:#0f766e;
+
+}
