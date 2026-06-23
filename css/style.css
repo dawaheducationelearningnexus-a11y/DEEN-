@@ -1374,3 +1374,112 @@ width:100%;
 }
 
 }
+
+/* ==========================
+   DEEN PREMIUM NAVIGATION
+========================== */
+
+.navbar{
+position:sticky;
+top:0;
+z-index:9999;
+background:#052b22;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 30px;
+box-shadow:0 5px 20px rgba(0,0,0,.2);
+}
+
+.logo-area{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo-area img{
+width:60px;
+height:60px;
+border-radius:50%;
+border:2px solid #d4af37;
+}
+
+.logo-area h2{
+color:#d4af37;
+margin:0;
+}
+
+.logo-area span{
+color:#fff;
+font-size:13px;
+}
+
+.nav-menu{
+display:flex;
+flex-wrap:wrap;
+gap:18px;
+}
+
+.nav-menu a{
+color:white;
+text-decoration:none;
+font-weight:500;
+transition:.3s;
+position:relative;
+}
+
+.nav-menu a:hover{
+color:#d4af37;
+}
+
+.nav-menu a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-5px;
+width:0;
+height:2px;
+background:#d4af37;
+transition:.3s;
+}
+
+.nav-menu a:hover::after{
+width:100%;
+}
+
+.menu-toggle{
+display:none;
+font-size:30px;
+color:white;
+cursor:pointer;
+}
+
+/* Mobile */
+
+@media(max-width:900px){
+
+.menu-toggle{
+display:block;
+}
+
+.nav-menu{
+position:absolute;
+top:100%;
+left:0;
+right:0;
+background:#052b22;
+display:none;
+flex-direction:column;
+padding:20px;
+}
+
+.nav-menu.active{
+display:flex;
+}
+
+.nav-menu a{
+padding:10px 0;
+border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+}
