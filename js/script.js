@@ -1,3 +1,5 @@
+
+
 // ======================================
 // DEEN PREMIUM WEBSITE SCRIPT
 // Dawah Education & E-learning Nexus
@@ -395,3 +397,70 @@ if(slides.length > 0){
 setInterval(changeSlide,5000);
 
 }
+
+// ==========================
+// PRELOADER
+// ==========================
+
+window.addEventListener("load",()=>{
+
+const preloader =
+document.getElementById("preloader");
+
+if(preloader){
+
+setTimeout(()=>{
+
+preloader.style.opacity="0";
+
+setTimeout(()=>{
+
+preloader.style.display="none";
+
+},1000);
+
+},1200);
+
+}
+
+});
+
+// ==========================
+// COUNTER ANIMATION
+// ==========================
+
+const counters =
+document.querySelectorAll(".counter");
+
+counters.forEach(counter=>{
+
+const updateCounter=()=>{
+
+const target =
++counter.getAttribute("data-target");
+
+const count =
++counter.innerText;
+
+const increment =
+target/100;
+
+if(count<target){
+
+counter.innerText =
+Math.ceil(count+increment);
+
+setTimeout(updateCounter,20);
+
+}else{
+
+counter.innerText=target;
+
+}
+
+};
+
+updateCounter();
+
+});
+
