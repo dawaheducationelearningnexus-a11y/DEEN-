@@ -359,3 +359,39 @@ body.loaded{
 opacity:1;
 
 }
+
+// ==========================
+// HERO AUTO SLIDER
+// ==========================
+
+const slides =
+document.querySelectorAll(".slide");
+
+let currentSlide = 0;
+
+function changeSlide(){
+
+slides.forEach(slide=>{
+
+slide.classList.remove("active");
+
+});
+
+currentSlide++;
+
+if(currentSlide >= slides.length){
+
+currentSlide = 0;
+
+}
+
+slides[currentSlide]
+.classList.add("active");
+
+}
+
+if(slides.length > 0){
+
+setInterval(changeSlide,5000);
+
+}
