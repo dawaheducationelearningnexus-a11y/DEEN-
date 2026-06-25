@@ -321,30 +321,6 @@ Dawah Education & E-learning Nexus
 Knowledge Changes Lives
 =================================
 `);
-/* Reveal Animation */
-
-.show{
-opacity:1 !important;
-transform:translateY(0) !important;
-}
-
-.welcome-card,
-.vision-card,
-.department-card,
-.course-card,
-.notice-card,
-.event-card,
-.contact-card,
-.donation-card,
-.stat-card{
-
-opacity:0;
-transform:translateY(40px);
-
-transition:all .8s ease;
-
-}
-
 
 /* Page Load */
 
@@ -429,7 +405,7 @@ preloader.style.display="none";
 // COUNTER ANIMATION
 // ==========================
 
-const counters =
+const counterItems =
 document.querySelectorAll(".counter");
 
 counters.forEach(counter=>{
