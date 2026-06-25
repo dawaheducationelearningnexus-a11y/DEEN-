@@ -2535,6 +2535,12 @@ transition:1s;
 
 }
 
+#preloader.hide{
+opacity:0;
+visibility:hidden;
+pointer-events:none;
+}
+
 .loader-content{
 
 text-align:center;
