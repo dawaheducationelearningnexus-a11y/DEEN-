@@ -145,6 +145,26 @@ color:var(--secondary);
 
 }
 
+.nav-menu{
+
+transition:.4s ease;
+
+}
+
+.nav-menu a{
+
+font-size:16px;
+
+font-weight:500;
+
+}
+
+.nav-menu a:hover{
+
+padding-left:10px;
+
+}
+
 .menu-toggle{
 
 display:none;
@@ -2665,5 +2685,75 @@ opacity:1;
 transform:translateY(0);
 
 }
+
+}
+
+/* TOP ANNOUNCEMENT */
+
+.top-announcement{
+
+background:#D4AF37;
+
+color:#051A13;
+
+font-weight:600;
+
+padding:8px 0;
+
+font-size:14px;
+
+position:relative;
+
+z-index:10000;
+
+}
+
+.welcome-card,
+.vision-card,
+.department-card,
+.course-card,
+.notice-card,
+.event-card,
+.contact-card,
+.donation-card{
+
+background:rgba(255,255,255,.95);
+
+backdrop-filter:blur(15px);
+
+}
+
+.gallery-grid img,
+.quran-image img,
+.hadith-image img{
+
+transition:.6s ease;
+
+}
+
+.gallery-grid img:hover,
+.quran-image img:hover,
+.hadith-image img:hover{
+
+transform:scale(1.05);
+
+filter:brightness(1.05);
+
+}
+
+section{
+
+scroll-margin-top:100px;
+
+}
+
+.footer{
+
+background:
+linear-gradient(
+135deg,
+#03110c,
+#051A13
+);
 
 }
