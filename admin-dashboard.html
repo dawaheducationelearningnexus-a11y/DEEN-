@@ -6,22 +6,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Admin Dashboard | DEEN LMS</title>
+<title>DEEN Admin Dashboard</title>
 
 <link rel="stylesheet" href="css/style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
 <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
 
 <body>
 
-<div class="admin-layout">
+<div class="admin-container">
 
-<!-- Sidebar -->
+<!-- SIDEBAR -->
 
 <aside class="admin-sidebar">
 
@@ -29,61 +27,67 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 <img src="images/logo.jpg" alt="DEEN">
 
-<h2>DEEN Admin</h2>
+<h2>DEEN</h2>
 
-<p>Master Control Panel</p>
+<p>Admin Panel</p>
 
 </div>
 
-<ul>
+<nav class="admin-menu">
 
-<li><a href="#"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+<a href="#"><i class="fas fa-chart-line"></i> Dashboard</a>
 
-<li><a href="#"><i class="fas fa-user-graduate"></i> Students</a></li>
+<a href="#"><i class="fas fa-user-graduate"></i> Students</a>
 
-<li><a href="#"><i class="fas fa-chalkboard-teacher"></i> Teachers</a></li>
+<a href="#"><i class="fas fa-chalkboard-teacher"></i> Teachers</a>
 
-<li><a href="#"><i class="fas fa-book-open"></i> Courses</a></li>
+<a href="#"><i class="fas fa-book"></i> Courses</a>
 
-<li><a href="#"><i class="fas fa-user-plus"></i> Admissions</a></li>
+<a href="#"><i class="fas fa-mosque"></i> Quran</a>
 
-<li><a href="#"><i class="fas fa-money-bill-wave"></i> Payments</a></li>
+<a href="#"><i class="fas fa-scroll"></i> Hadith</a>
 
-<li><a href="#"><i class="fas fa-certificate"></i> Certificates</a></li>
+<a href="#"><i class="fas fa-bullhorn"></i> Notices</a>
 
-<li><a href="#"><i class="fas fa-bullhorn"></i> Notices</a></li>
+<a href="#"><i class="fas fa-calendar"></i> Events</a>
 
-<li><a href="#"><i class="fas fa-calendar"></i> Events</a></li>
+<a href="#"><i class="fas fa-image"></i> Gallery</a>
 
-<li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+<a href="#"><i class="fas fa-donate"></i> Donations</a>
 
-<li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+<a href="#"><i class="fas fa-cog"></i> Settings</a>
 
-</ul>
+<a href="index.html"><i class="fas fa-home"></i> Website</a>
+
+</nav>
 
 </aside>
 
-<!-- Main -->
+<!-- MAIN CONTENT -->
 
 <main class="admin-main">
 
-<div class="admin-header">
+<header class="admin-topbar">
 
-<h1>👑 DEEN Administration Panel</h1>
+<h1>DEEN Administration Center</h1>
 
-<p>Dawah Education & E-learning Nexus</p>
+<div class="admin-user">
+
+<i class="fas fa-user-circle"></i>
+
+<span>Administrator</span>
 
 </div>
 
-<!-- Analytics -->
+</header>
 
-<div class="admin-grid">
+<!-- STATS -->
+
+<section class="admin-stats">
 
 <div class="admin-card">
 
-<i class="fas fa-user-graduate"></i>
-
-<h2>1,250</h2>
+<h2>1250</h2>
 
 <p>Total Students</p>
 
@@ -91,101 +95,179 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 <div class="admin-card">
 
-<i class="fas fa-chalkboard-teacher"></i>
+<h2>25</h2>
+
+<p>Courses</p>
+
+</div>
+
+<div class="admin-card">
 
 <h2>35</h2>
 
-<p>Total Teachers</p>
+<p>Teachers</p>
 
 </div>
 
 <div class="admin-card">
 
-<i class="fas fa-book-open"></i>
+<h2>6</h2>
 
-<h2>25</h2>
-
-<p>Active Courses</p>
+<p>Departments</p>
 
 </div>
 
-<div class="admin-card">
+</section>
 
-<i class="fas fa-money-check-alt"></i>
+<!-- QUICK ACTIONS -->
 
-<h2>৳ 1,25,000</h2>
+<section class="quick-actions">
 
-<p>Monthly Revenue</p>
+<h2>Quick Management</h2>
 
-</div>
+<div class="action-grid">
 
-</div>
+<div class="action-card">
 
-<!-- Recent Admissions -->
+<i class="fas fa-user-plus"></i>
 
-<div class="admin-widget">
-
-<h2>📥 Recent Admissions</h2>
-
-<table class="admin-table">
-
-<tr>
-<th>Name</th>
-<th>Course</th>
-<th>Status</th>
-</tr>
-
-<tr>
-<td>Student Name</td>
-<td>আল কোরআন শিক্ষা</td>
-<td>Pending</td>
-</tr>
-
-<tr>
-<td>Student Name</td>
-<td>হাদীস শিক্ষা</td>
-<td>Approved</td>
-</tr>
-
-</table>
+<h3>Add Student</h3>
 
 </div>
 
-<!-- System Overview -->
+<div class="action-card">
 
-<div class="admin-widget">
+<i class="fas fa-chalkboard-teacher"></i>
 
-<h2>📊 System Overview</h2>
-
-<p>Platform Status: Active</p>
-
-<p>Courses Running: 25</p>
-
-<p>Live Classes This Week: 18</p>
-
-<p>Certificates Issued: 420</p>
+<h3>Add Teacher</h3>
 
 </div>
 
-<!-- Quick Actions -->
+<div class="action-card">
 
-<div class="admin-widget">
+<i class="fas fa-book-medical"></i>
 
-<h2>⚡ Quick Actions</h2>
+<h3>Add Course</h3>
 
-<div class="quick-actions">
+</div>
 
-<button>Add Course</button>
+<div class="action-card">
 
-<button>Add Teacher</button>
+<i class="fas fa-bullhorn"></i>
 
-<button>Publish Notice</button>
+<h3>Create Notice</h3>
 
-<button>Approve Admission</button>
+</div>
+
+<div class="action-card">
+
+<i class="fas fa-calendar-plus"></i>
+
+<h3>Create Event</h3>
+
+</div>
+
+<div class="action-card">
+
+<i class="fas fa-image"></i>
+
+<h3>Upload Gallery</h3>
 
 </div>
 
 </div>
+
+</section>
+
+
+
+<!-- RECENT ACTIVITY -->
+
+<section class="recent-activity">
+
+<h2>Recent Activities</h2>
+
+<div class="activity-list">
+
+<div class="activity-item">
+
+Student Admission Completed
+
+<span>5 min ago</span>
+
+</div>
+
+<div class="activity-item">
+
+New Quran Course Added
+
+<span>20 min ago</span>
+
+</div>
+
+<div class="activity-item">
+
+Notice Published
+
+<span>1 hour ago</span>
+
+</div>
+
+<div class="activity-item">
+
+Teacher Account Created
+
+<span>Today</span>
+
+</div>
+
+</div>
+
+</section>
+
+  <!-- SYSTEM STATUS -->
+
+<section class="system-status">
+
+<h2>System Status</h2>
+
+<div class="status-grid">
+
+<div class="status-card">
+
+<h3>Website</h3>
+
+<p>Online</p>
+
+</div>
+
+<div class="status-card">
+
+<h3>E-Learning</h3>
+
+<p>Active</p>
+
+</div>
+
+<div class="status-card">
+
+<h3>Database</h3>
+
+<p>Connected</p>
+
+</div>
+
+<div class="status-card">
+
+<h3>Security</h3>
+
+<p>Protected</p>
+
+</div>
+
+</div>
+
+</section>
 
 </main>
 
