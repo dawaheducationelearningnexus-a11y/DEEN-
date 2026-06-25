@@ -3134,3 +3134,39 @@ color:#0B3D2E;
 margin-bottom:10px;
 
 }
+
+.show{
+opacity:1 !important;
+transform:translateY(0) !important;
+}
+
+.welcome-card,
+.vision-card,
+.department-card,
+.course-card,
+.notice-card,
+.event-card,
+.contact-card,
+.donation-card,
+.stat-card{
+
+opacity:0;
+transform:translateY(40px);
+
+transition:all .8s ease;
+
+}
+
+body{
+
+opacity:0;
+
+transition:opacity .8s ease;
+
+}
+
+body.loaded{
+
+opacity:1;
+
+}
