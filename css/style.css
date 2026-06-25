@@ -3024,3 +3024,113 @@ flex-direction:column;
 
 }
 
+/* =========================
+   ADMIN TABLES
+========================= */
+
+.management-section{
+
+margin-top:60px;
+
+}
+
+.table-container{
+
+overflow-x:auto;
+
+background:#fff;
+
+padding:25px;
+
+border-radius:20px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.admin-table{
+
+width:100%;
+
+border-collapse:collapse;
+
+}
+
+.admin-table th{
+
+background:#0B3D2E;
+
+color:#fff;
+
+padding:15px;
+
+text-align:left;
+
+}
+
+.admin-table td{
+
+padding:15px;
+
+border-bottom:1px solid #eee;
+
+}
+
+.table-btn{
+
+padding:8px 15px;
+
+border:none;
+
+background:#D4AF37;
+
+cursor:pointer;
+
+border-radius:8px;
+
+font-weight:600;
+
+}
+
+.request-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+margin-top:25px;
+
+}
+
+.request-card{
+
+background:#fff;
+
+padding:30px;
+
+border-radius:20px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+transition:.3s;
+
+text-align:center;
+
+}
+
+.request-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.request-card h3{
+
+color:#0B3D2E;
+
+margin-bottom:10px;
+
+}
